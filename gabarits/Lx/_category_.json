@@ -1,0 +1,8 @@
+{
+  "label": "Lx : Titre",
+  "position": 2,
+  "link": {
+    "type": "doc",
+    "id": "accueil"
+  }
+}

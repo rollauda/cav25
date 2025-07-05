@@ -1,0 +1,72 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #ff9f1a;
+  --ifm-color-primary-dark: #fd9300;
+  --ifm-color-primary-darker: #ef8b00;
+  --ifm-color-primary-darkest: #c57200;
+  --ifm-color-primary-light: #ffab36;
+  --ifm-color-primary-lighter: #ffb144;
+  --ifm-color-primary-lightest: #ffc26e;
+  --ifm-background-color: rgb(219, 230, 249);
+  --ifm-code-font-size: 95%;
+  --ifm-navbar-height: 50px;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* 2. Réduction de la taille de police globale */
+  --ifm-font-size-base: 15px;    /* par défaut 16px */
+  --ifm-font-size-small: 14px;   /* par défaut ~14px */
+}
+
+/* Limiter la largeur de l'encart tip sur toutes les pages */
+.theme-admonition {
+  max-width: 900px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* cible la balise <footer> générée par Docusaurus */
+.footer {
+  background-color: #cbdcf6 !important;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+/* Texte et liens en noir */
+.footer,
+.footer a {
+  color: #000 !important;
+}
+
+/* Réduire la taille du texte du footer à 0.75rem (75% de la taille de base) */
+.footer {
+  font-size: 0.80rem !important;
+}
+
+/* 1. Appliquer le gris sur la barre de navigation principale */
+.theme-layout-navbar,
+.navbar,
+.navbar__inner {
+  background-color: #cbdcf6 !important;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* 4. Ajustement des titres (optionnel) */
+h1 { font-size: 2.25rem !important; }  /* vs ~2.5rem par défaut */
+h2 { font-size: 1.75rem !important; }  /* vs ~2rem        */
+h3 { font-size: 1.5rem  !important; }  /* vs ~1.75rem     */
