@@ -1,9 +1,0 @@
-.docusaurus/
-build/
-node_modules/
-/archives
-bak/
-howto.md
-howto-general.md
-howto-clonage-site.md
-**/.DS_Store
