@@ -10,20 +10,20 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'DGEMC',
+  title: 'Spécialité Première CAV',
   tagline: 'Rolland Auda, La Condamine, Quito, 2025-2026',
-  favicon: 'img/droit.svg',
+  favicon: 'img/cinema.svg',
 
   // Set the production url of your site here
   url: 'https://profauda.fr',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/dgemc25/',
+  baseUrl: '/cav25/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'rollauda', // Usually your GitHub org/user name.
-  projectName: 'dgemc25', // Usually your repo name.
+  projectName: 'cav25', // Usually your repo name.
   trailingSlash: false, 
 
   onBrokenLinks: 'throw',
@@ -77,24 +77,61 @@ const config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'activites',
-        path: 'activites',
-        routeBasePath: 'activites',
+        id: 'travaux',
+        path: 'travaux',
+        routeBasePath: 'travaux',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'projet',
+        path: 'projet',
+        routeBasePath: 'projet',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'ressources',
+        path: 'ressources',
+        routeBasePath: 'ressources',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'actus',
+        path: 'actus',
+        routeBasePath: 'actus',
         sidebarPath: require.resolve('./sidebars.js'),
       },
     ],
   ],
+
+  themes: ['@docusaurus/theme-mermaid'],
+
+  // Active le support de Mermaid pour le Markdown
+  markdown: {
+    mermaid: true,
+  },
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
+      mermaid: {
+        theme: {light: 'neutral', dark: 'forest'},
+      },
       navbar: {
-        title: 'dgemc-conda',
+        title: 'CAV-conda',
         logo: {
-          alt: 'dgemc',
-          src: 'img/justice.svg',
+          alt: 'cav',
+          src: 'img/cinema.svg',
         },
         items: [
           {
@@ -105,10 +142,28 @@ const config = {
             docsPluginId: 'docs',
           },
           {
-            to: '/activites/intro', // Pointe vers le fichier intro.md
-            label: 'Activités', 
+            to: '/travaux/intro', // Pointe vers le fichier intro.md
+            label: 'Travaux', 
             position: 'left',
-            activeBaseRegex: `/activites/`, // Pour mettre en surbrillance l'élément actif
+            activeBaseRegex: `/travaux/`, // Pour mettre en surbrillance l'élément actif
+          },
+          {
+            to: '/projet/intro', // Pointe vers le fichier intro.md
+            label: 'Projet final', 
+            position: 'left',
+            activeBaseRegex: `/projet/`, // Pour mettre en surbrillance l'élément actif
+          },
+          {
+            to: '/ressources/intro', 
+            label: 'Ressources', 
+            position: 'left',
+            activeBaseRegex: `/ressources/`, // Pour mettre en surbrillance l'élément actif
+          },
+          {
+            to: '/actus/intro', // Pointe vers le fichier intro.md
+            label: 'Actualités  ', 
+            position: 'left',
+            activeBaseRegex: `/actus/`, // Pour mettre en surbrillance l'élément actif
           },
           {
             href: 'https://www.profauda.fr/',

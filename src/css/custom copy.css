@@ -16,7 +16,7 @@
   --ifm-color-primary-lightest: #bf5822;
   
   /* Background et couleurs de base */
-  --ifm-background-color: #f1f1f1; /* Blanc teinté violet très pâle */
+  --ifm-background-color: #e5e7e6; /* Blanc teinté violet très pâle */
   --ifm-font-color-base: #1f2937; /* Gris très foncé pour le texte */
   --ifm-navbar-link-color: #ffffff; /* Liens blancs sur navbar violette */
   --ifm-navbar-link-hover-color: #e5e7e6; /* Hover violet très clair */
@@ -42,7 +42,7 @@
 .theme-layout-navbar,
 .navbar,
 .navbar__inner {
-  background-color: #a14514!important; 
+  background-color: #93441A!important; /* Violet intellectuel */
   opacity: 1 !important;
   backdrop-filter: none !important;
 }
@@ -72,11 +72,11 @@
 
 /* Footer avec violet intellectuel */
 .footer {
-  background-color: #a14514!important; /* Violet intellectuel */
+  background-color: #93441A!important; /* Violet intellectuel */
   padding-top: 0.5rem !important;
   padding-bottom: 0.5rem !important;
   font-size: 0.80rem !important;
-  border-top: 3px solid #a14514; /* Bordure violet plus foncé */
+  border-top: 3px solid #93441A; /* Bordure violet plus foncé */
 }
 
 /* Texte et liens footer en blanc */
@@ -147,33 +147,3 @@
 h1 { font-size: 2.25rem !important; }  /* vs ~2.5rem par défaut */
 h2 { font-size: 1.75rem !important; }  /* vs ~2rem        */
 h3 { font-size: 1.5rem  !important; }  /* vs ~1.75rem     */
-
-/* Style des tableaux avec alternance par défaut et arrondis */
-table {
-  border-radius: 12px !important;
-  overflow: hidden !important;
-}
-
-table td, table th {
-  border-radius: 4px !important;
-}
-
-/* Couleur de fond par défaut pour les cellules */
-table td {
-  background-color: #fdf8f5c6!important; /* Blanc par défaut */
-}
-
-/* Alternance - lignes paires (2, 4, 6...) */
-table tr:nth-child(even) td {
-  background-color: #ffeee48e !important; /* Gris clair pour les lignes paires */
-}
-
-/* En-têtes avec couleur plus marquée */
-table th {
-  background-color: #ffeee48e !important; /* Gris plus foncé pour les en-têtes */
-}
-
-/* Bordures optionnelles pour mieux définir les cellules */
-table td, table th {
-  border: 1px solid #dee2e6 !important;
-}

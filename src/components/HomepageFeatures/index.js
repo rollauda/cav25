@@ -6,19 +6,34 @@ import Link from '@docusaurus/Link';
 const FeatureList = [
   {
     title: 'Leçons',
-    Svg: require('@site/static/img/justice.svg').default,
+    Svg: require('@site/static/img/classes.svg').default,
     to: '/docs/L0/accueil',
   },
   {
-    title: 'Activités',
-    Svg: require('@site/static/img/event.svg').default,
-    to: '/activites/intro',
+    title: 'Travaux',
+    Svg: require('@site/static/img/film.svg').default,
+    to: '/travaux/intro',
+  },
+   {
+    title: 'Projet',
+    Svg: require('@site/static/img/clap.svg').default,
+    to: '/projet/intro',
+  },
+   {
+    title: 'Ressources',
+    Svg: require('@site/static/img/link.svg').default,
+    to: '/ressources/intro',
+  },
+   {
+    title: 'Actus',
+    Svg: require('@site/static/img/actu.svg').default,
+    to: '/actus/intro',
   },
 ];
 
 function Feature({Svg, title, description, to}) {
   return (
-    <div className={clsx('col col--5')}>
+    <div className={clsx('col')}>
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
@@ -37,7 +52,7 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
+        <div className="row justify-content-center">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
