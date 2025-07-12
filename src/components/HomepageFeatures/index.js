@@ -22,7 +22,7 @@ const FeatureList = [
    {
     title: 'Ressources',
     Svg: require('@site/static/img/link.svg').default,
-    to: '/ressources/intro',
+    to: '/ressources/1',
   },
    {
     title: 'Actus',

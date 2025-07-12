@@ -154,7 +154,7 @@ const config = {
             activeBaseRegex: `/projet/`, // Pour mettre en surbrillance l'élément actif
           },
           {
-            to: '/ressources/intro', 
+            to: '/ressources/1', 
             label: 'Ressources', 
             position: 'left',
             activeBaseRegex: `/ressources/`, // Pour mettre en surbrillance l'élément actif
