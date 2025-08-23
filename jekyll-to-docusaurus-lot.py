@@ -175,7 +175,7 @@ class JekyllToDocusaurusConverter:
                 if alt_match:
                     alt_text = alt_match.group(1)
                 
-                # Construire le template avec la bonne syntaxe JSX
+                # Construire le template avec la bonne syntaxe JSX et useBaseUrl dans les liens
                 template = '''<div style={{textAlign: 'center'}}>
   <a href={useBaseUrl('PATH')} target="_blank" rel="noopener noreferrer">
     <img
@@ -200,7 +200,7 @@ class JekyllToDocusaurusConverter:
                 # Adapter le chemin pour Docusaurus
                 adapted_path = self.adapt_asset_path(img_path, 'img')
                 
-                # Construire le template avec la bonne syntaxe JSX
+                # Construire le template avec la bonne syntaxe JSX et useBaseUrl dans les liens
                 template = '''<div style={{textAlign: 'center'}}>
   <a href={useBaseUrl('PATH')} target="_blank" rel="noopener noreferrer">
     <img
@@ -437,14 +437,29 @@ class JekyllToDocusaurusConverter:
         return content
     
     def adapt_asset_path(self, jekyll_path, asset_type='img'):
-        """Adapte les chemins d'assets Jekyll vers Docusaurus
+        """Adapte les chemins d'assets Jekyll vers Docusaurus selon le site
         
-        Convertit:
-        - /assets/img/fichier.jpg → /img/dgemc/fichier.jpg  
-        - /assets/pdf/fichier.pdf → /pdf/fichier.pdf
-        - assets/img/fichier.jpg → /img/dgemc/fichier.jpg
-        - assets/pdf/fichier.pdf → /pdf/fichier.pdf
+        Convertit automatiquement selon le site détecté :
+        - phil25: /assets/img/fichier.jpg → /img/philo/fichier.jpg  
+        - dgemc25: /assets/img/fichier.jpg → /img/dgemc/fichier.jpg
+        - cav25: /assets/img/fichier.jpg → /img/cav/fichier.jpg
+        - hlp25: /assets/img/fichier.jpg → /img/hlp/fichier.jpg
+        - /assets/pdf/fichier.pdf → /pdf/fichier.pdf (tous sites)
         """
+        
+        # Détecter le site actuel à partir du répertoire de travail
+        current_dir = os.getcwd()
+        
+        if 'phil25' in current_dir:
+            img_folder = 'philo'
+        elif 'dgemc25' in current_dir:
+            img_folder = 'dgemc'
+        elif 'cav25' in current_dir:
+            img_folder = 'cav'
+        elif 'hlp25' in current_dir:
+            img_folder = 'hlp'
+        else:
+            img_folder = 'general'  # Dossier par défaut
         
         # Nettoyer le chemin
         path = jekyll_path.strip()
@@ -470,7 +485,7 @@ class JekyllToDocusaurusConverter:
                 filename = path.split('/assets/img/')[-1]
             else:
                 filename = path.split('assets/img/')[-1]
-            return f'/img/dgemc/{filename}'
+            return f'/img/{img_folder}/{filename}'
         
         # Gérer les autres chemins /assets/ ou assets/
         elif '/assets/' in path or path.startswith('assets/'):
@@ -483,7 +498,7 @@ class JekyllToDocusaurusConverter:
             if asset_type == 'pdf' or filename.endswith('.pdf'):
                 return f'/pdf/{filename}'
             elif asset_type == 'img' or filename.lower().endswith(('.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg')):
-                return f'/img/dgemc/{filename}'
+                return f'/img/{img_folder}/{filename}'
             else:
                 return f'/files/{filename}'
         
@@ -496,7 +511,7 @@ class JekyllToDocusaurusConverter:
             if asset_type == 'pdf' or path.endswith('.pdf'):
                 return f'/pdf/{path}'
             elif asset_type == 'img' or path.lower().endswith(('.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg')):
-                return f'/img/dgemc/{path}'
+                return f'/img/{img_folder}/{path}'
             else:
                 return f'/{path}'
 
@@ -554,7 +569,7 @@ class JekyllToDocusaurusConverter:
                     additional_styles = additional_styles.replace(';', ', ').strip(', ')
                     style_content += f", {additional_styles}"
                 
-                # Construire le template avec la bonne syntaxe JSX
+                # Construire le template avec la bonne syntaxe JSX et useBaseUrl dans les liens
                 template = '''<div style={{textAlign: 'center'}}>
   <a href={useBaseUrl('PATH')} target="_blank" rel="noopener noreferrer">
     <img
@@ -841,8 +856,8 @@ class JekyllToDocusaurusConverter:
             if alt_match:
                 alt_text = alt_match.group(1)
             
-            # Générer la syntaxe JSX correcte pour tableau
-            return f'<div style={{{{textAlign: "center"}}}}><img src={{useBaseUrl("{adapted_path}")}} width="{width}" alt="{alt_text}" /></div>'
+            # Générer la syntaxe JSX correcte pour tableau avec lien cliquable
+            return f'<div style={{{{textAlign: "center"}}}}><a href={{useBaseUrl("{adapted_path}")}} target="_blank" rel="noopener noreferrer"><img src={{useBaseUrl("{adapted_path}")}} width="{width}" alt="{alt_text}" /></a></div>'
         
         # Appliquer la conversion
         converted_line = re.sub(img_pattern, replace_table_image, table_line)
@@ -857,8 +872,8 @@ class JekyllToDocusaurusConverter:
             # Adapter le chemin de l'image pour Docusaurus
             adapted_path = self.adapt_asset_path(img_path, 'img')
             
-            # Générer la syntaxe JSX correcte pour tableau
-            return f'<div style={{{{textAlign: "center"}}}}><img src={{useBaseUrl("{adapted_path}")}} width="350" alt="{alt_text}" /></div>'
+            # Générer la syntaxe JSX correcte pour tableau avec lien cliquable
+            return f'<div style={{{{textAlign: "center"}}}}><a href={{useBaseUrl("{adapted_path}")}} target="_blank" rel="noopener noreferrer"><img src={{useBaseUrl("{adapted_path}")}} width="350" alt="{alt_text}" /></a></div>'
         
         converted_line = re.sub(markdown_img_pattern, replace_markdown_table_image, converted_line)
         
