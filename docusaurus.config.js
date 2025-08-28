@@ -142,13 +142,13 @@ const config = {
             docsPluginId: 'docs',
           },
           {
-            to: '/travaux/intro', // Pointe vers le fichier intro.md
+            to: '/travaux/0/intro', // Pointe vers le fichier intro.md
             label: 'Travaux', 
             position: 'left',
             activeBaseRegex: `/travaux/`, // Pour mettre en surbrillance l'élément actif
           },
           {
-            to: '/projet/intro', // Pointe vers le fichier intro.md
+            to: '/projet/00/projet', // Pointe vers le fichier intro.md
             label: 'Projet final', 
             position: 'left',
             activeBaseRegex: `/projet/`, // Pour mettre en surbrillance l'élément actif
