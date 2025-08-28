@@ -10,9 +10,8 @@ git add .
 
 # Deploy complet
 npm run build 
-&& GIT_USER=rollandauda npm run deploy
-
- && git commit -m "Update" && git push
+GIT_USER=rollandauda npm run deploy
+git commit -m "Update" && git push
 ```
 
 ## Configuration initiale

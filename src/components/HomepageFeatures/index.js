@@ -12,12 +12,12 @@ const FeatureList = [
   {
     title: 'Travaux',
     Svg: require('@site/static/img/film.svg').default,
-    to: '/travaux/intro',
+    to: '/travaux/0/intro',
   },
    {
     title: 'Projet',
     Svg: require('@site/static/img/clap.svg').default,
-    to: '/projet/intro',
+    to: '/projet/00/projet',
   },
    {
     title: 'Ressources',
