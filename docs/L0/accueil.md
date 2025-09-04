@@ -23,7 +23,8 @@ A part l'introduction et la première leçon sur l'analyse filmique, l'ordre des
 
 - **Introduction : Qu'est-ce que le cinéma ?**
 - **L'analyse filmique** (*axe du programme : Être auteur, de l'écriture de scenario au final cut*)
-- **L'auteur au cinéma face aux studios de production** (*axes du programme : Être auteur, de l'écriture de scenario au final cut + Les studios*)
+- **Le point ed vue au cinéma** (*axe du programme : Être auteur, de l'écriture de scenario au final cut*)
+- **L'auteur au cinéma face aux studios de production** (*axes du programme : Les studios + Être auteur, de l'écriture de scenario au final cut*)
 - **Le son au cinéma** (*axe du programme : Une technique dans son histoire*)
 - **Étude d'un genre cinématographique** (*axe du programme : Les genres cinématographiques, de la production à la réception*)
 
