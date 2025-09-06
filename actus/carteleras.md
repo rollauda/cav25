@@ -10,3 +10,7 @@ sidebar_position: 2
 
 ## Programme de la Cinemateca nacional
 [https://cinematecanacionalcce.com/cartelera/](https://cinematecanacionalcce.com/cartelera/) 
+
+## Programme de de la Sala Sur (FLACSO)
+
+[https://www.flacso.edu.ec/salasur/](https://www.flacso.edu.ec/salasur/)

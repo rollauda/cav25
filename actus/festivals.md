@@ -6,13 +6,13 @@ sidebar_position: 3
 
 ## Festival EDOC (Documentaires)
 [https://festivaledoc.org/](https://festivaledoc.org/)   
-**Au mois de septembre**    
+**Du 5 au 14 septembre 2025**    
 
 >El Festival Internacional de Cine Documental “Encuentros del Otro Cine” – EDOC, es un festival internacional independiente, no competitivo, de cine documental; se realiza en Quito, Guayaquil y de manera itinerante en otras ciudades del Ecuador.
 
 ## Festival Eurociné
 [https://eurocineecuador.com/](https://eurocineecuador.com/)   
-**Mois de septembre et octobre**  
+**Du 18 au 28 septembre 2025**  
 
 > Eurocine es un festival emblemático de cine independiente europeo, organizado y producido por la Fundación Cultural OchoyMedio, con el apoyo de la Unión Europea y de las Embajadas Europeas. Su objetivo principal es generar espacios de encuentro y diálogo entre Europa y América Latina por medio de la proyección (contemporánea y patrimonial) de películas europeas de alta calidad.
 
@@ -28,8 +28,10 @@ sidebar_position: 3
 
 **Au mois d'octobre**   
 > Festival de très-courts-métrages.   
-> Thème 2024 : *Un super-pouvoir*.  
+> Thème 2025 : *La beauté*.  
+> Soumission des court-métrages : du 15/09/2025 du 15/01/2026 (voir la page [Comment participer ?](https://www.festivalnikon.fr/comment-participer)) 
 > Vous pouvez visionner les archives des années précédentes.
+> 
 
 # My french film festival
 [site du festival](https://www.myfrenchfilmfestival.com/)   
