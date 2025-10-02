@@ -1,8 +1,8 @@
 {
-  "label": "Très court-métrage",
+  "label": "Le pitch",
   "position": 3,
   "link": {
     "type": "doc",
-    "id": "tcm"
+    "id": "pitch"
   }
 }
