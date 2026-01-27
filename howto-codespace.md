@@ -11,6 +11,7 @@ git add .
 # Deploy complet
 npm run build 
 GIT_USER=rollandauda npm run deploy
+git add .
 git commit -m "Update" && git push
 ```
 
