@@ -6,6 +6,10 @@ id: L3
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
+:::tip[Exercice évalué] 
+Faire deux cartes mentales qui synthétisent le I/ et le II/ de la leçon
+:::
+
 <embed
   src={useBaseUrl('/pdf/L3/L3.pdf')}
   type="application/pdf"
